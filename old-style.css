@@ -1,0 +1,77 @@
+body {
+    color: white
+}
+
+button {
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+}
+
+#displayScreen {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding: 1rem;
+    margin-top: 1.3rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+}
+
+.zoneCalculatrice .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoneCalculatrice {
+    background-color: #000000;
+    border-radius: 2rem;
+    max-width: 350px;
+}
+
+.firstRow, .secondRow, .thirdRow, .fourthRow, .fifthRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.operator, .input, .number{
+    padding: 1.4rem;
+    margin: 0.7rem;
+    border-radius: 2rem;
+}
+
+.operator {
+    background-color: #FF9C00;
+    transition-duration: 350ms;
+}
+
+.operator:hover {
+    background-color: #fdbd55;
+    transition-duration: 350ms;
+}
+
+.input {
+    background-color: #5D5C5F;
+    transition-duration: 350ms;
+}
+
+.input:hover {
+    background-color: #9b9a9e;
+    transition-duration: 350ms;
+}
+
+.number {
+    background-color: #2E2E30;
+    transition-duration: 350ms;
+}
+
+.number:hover {
+    background-color: #6a6a6c;
+    transition-duration: 350ms;
+}
