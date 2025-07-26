@@ -1,6 +1,7 @@
 /* * 
    *  Améliorations à prévoir :
-   *  Lorsque je clique sur "=" à l'infinie, je ne maîtrise pas le calcule qui est opéré et ce qui est affiché
+   *  Lorsque je clique sur "=" à l'infinie, je ne maîtrise pas le calcule qui est opéré et ce qui est affiché 
+   *    => Maintenant ça prend à chaque fois le dernier resultat et ça itère le calcule en prenant pour les opérations le résultat comme A et comme B 
    *  Mettre en place un système qui reconnaisse les inputs pour la calculette
    *  Prendre en charge les calculs décimaux
    *
@@ -26,7 +27,6 @@ let result = 0
 
 for (let i = 0 ; i < listBtns.length ; i++) {
     listBtns[i].addEventListener("click", () => {
-        console.log(listBtns[i].innerText)
         if (reNumber.test(listBtns[i].innerText)) {
             if (resetDispScreen) {
                 dispCalcul.innerText = "0"
@@ -55,6 +55,7 @@ for (let i = 0 ; i < listBtns.length ; i++) {
             secondNumber = parseInt(dispCalcul.innerText)
             result = operation(operator, firstNumber, secondNumber)
             dispCalcul.innerText = result.toString()
+            firstNumber = result
             resetDispScreen = true
         }
         if (listBtns[i].innerText === "AC") {
